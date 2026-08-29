@@ -1,0 +1,36 @@
+name: Generate python client
+on: push
+jobs:
+  generate-clients:
+    runs-on: ubuntu-latest
+    name: OCW API gen
+    steps:
+    - uses: actions/checkout@master
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.10
+    - name: Clean old client
+      run: rm -rf *
+  
+    - name: Generate OpenAPI document 
+      run: curl "https://opencarwings.viaaq.eu/apidocs/?format=openapi" > openapi.json
+
+    - name: Generate new client
+      uses: openapi-generators/openapitools-generator-action@v1
+      with:
+        generator: python
+        out: new_client
+
+    - name: Copy new client
+      run: |
+        cp -r new_client/* .
+        cp -r new_client/.* .
+        rm -rf new_client
+    
+
+    - name: Commit new client
+      run: |
+        git add .
+        git commit -am "Update python client"
+        git push
