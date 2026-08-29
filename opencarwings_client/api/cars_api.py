@@ -43,7 +43,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_car_delete(
+    async def api_car_delete(
         self,
         vin: StrictStr,
         _request_timeout: Union[
@@ -97,11 +97,11 @@ class CarsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '204': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -109,7 +109,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_car_delete_with_http_info(
+    async def api_car_delete_with_http_info(
         self,
         vin: StrictStr,
         _request_timeout: Union[
@@ -163,11 +163,11 @@ class CarsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '204': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -175,7 +175,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_car_delete_without_preload_content(
+    async def api_car_delete_without_preload_content(
         self,
         vin: StrictStr,
         _request_timeout: Union[
@@ -229,7 +229,7 @@ class CarsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '204': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -295,7 +295,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_car_list(
+    async def api_car_list(
         self,
         _request_timeout: Union[
             None,
@@ -347,11 +347,11 @@ class CarsApi:
             '200': "List[CarSerializerList]",
             '401': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -359,7 +359,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_car_list_with_http_info(
+    async def api_car_list_with_http_info(
         self,
         _request_timeout: Union[
             None,
@@ -411,11 +411,11 @@ class CarsApi:
             '200': "List[CarSerializerList]",
             '401': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -423,7 +423,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_car_list_without_preload_content(
+    async def api_car_list_without_preload_content(
         self,
         _request_timeout: Union[
             None,
@@ -475,7 +475,7 @@ class CarsApi:
             '200': "List[CarSerializerList]",
             '401': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -545,7 +545,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_car_partial_update(
+    async def api_car_partial_update(
         self,
         vin: StrictStr,
         data: CarUpdating,
@@ -603,11 +603,11 @@ class CarsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "Car",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -615,7 +615,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_car_partial_update_with_http_info(
+    async def api_car_partial_update_with_http_info(
         self,
         vin: StrictStr,
         data: CarUpdating,
@@ -673,11 +673,11 @@ class CarsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "Car",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -685,7 +685,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_car_partial_update_without_preload_content(
+    async def api_car_partial_update_without_preload_content(
         self,
         vin: StrictStr,
         data: CarUpdating,
@@ -743,7 +743,7 @@ class CarsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "Car",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -832,7 +832,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_car_read(
+    async def api_car_read(
         self,
         vin: StrictStr,
         _request_timeout: Union[
@@ -886,11 +886,11 @@ class CarsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "Car",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -898,7 +898,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_car_read_with_http_info(
+    async def api_car_read_with_http_info(
         self,
         vin: StrictStr,
         _request_timeout: Union[
@@ -952,11 +952,11 @@ class CarsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "Car",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -964,7 +964,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_car_read_without_preload_content(
+    async def api_car_read_without_preload_content(
         self,
         vin: StrictStr,
         _request_timeout: Union[
@@ -1018,7 +1018,7 @@ class CarsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "Car",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1091,7 +1091,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_car_timers_create(
+    async def api_car_timers_create(
         self,
         vin: StrictStr,
         data: CommandTimerSetting,
@@ -1149,11 +1149,11 @@ class CarsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "CommandTimerSetting",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1161,7 +1161,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_car_timers_create_with_http_info(
+    async def api_car_timers_create_with_http_info(
         self,
         vin: StrictStr,
         data: CommandTimerSetting,
@@ -1219,11 +1219,11 @@ class CarsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "CommandTimerSetting",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1231,7 +1231,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_car_timers_create_without_preload_content(
+    async def api_car_timers_create_without_preload_content(
         self,
         vin: StrictStr,
         data: CommandTimerSetting,
@@ -1289,7 +1289,7 @@ class CarsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "CommandTimerSetting",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1378,7 +1378,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_car_timers_delete(
+    async def api_car_timers_delete(
         self,
         vin: StrictStr,
         id: StrictStr,
@@ -1436,11 +1436,11 @@ class CarsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '204': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1448,7 +1448,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_car_timers_delete_with_http_info(
+    async def api_car_timers_delete_with_http_info(
         self,
         vin: StrictStr,
         id: StrictStr,
@@ -1506,11 +1506,11 @@ class CarsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '204': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1518,7 +1518,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_car_timers_delete_without_preload_content(
+    async def api_car_timers_delete_without_preload_content(
         self,
         vin: StrictStr,
         id: StrictStr,
@@ -1576,7 +1576,7 @@ class CarsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '204': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1645,7 +1645,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_car_timers_list(
+    async def api_car_timers_list(
         self,
         vin: StrictStr,
         _request_timeout: Union[
@@ -1699,11 +1699,11 @@ class CarsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "List[CommandTimerSetting]",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1711,7 +1711,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_car_timers_list_with_http_info(
+    async def api_car_timers_list_with_http_info(
         self,
         vin: StrictStr,
         _request_timeout: Union[
@@ -1765,11 +1765,11 @@ class CarsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "List[CommandTimerSetting]",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1777,7 +1777,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_car_timers_list_without_preload_content(
+    async def api_car_timers_list_without_preload_content(
         self,
         vin: StrictStr,
         _request_timeout: Union[
@@ -1831,7 +1831,7 @@ class CarsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "List[CommandTimerSetting]",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1904,7 +1904,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_car_timers_partial_update(
+    async def api_car_timers_partial_update(
         self,
         vin: StrictStr,
         id: StrictStr,
@@ -1966,11 +1966,11 @@ class CarsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "CommandTimerSetting",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1978,7 +1978,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_car_timers_partial_update_with_http_info(
+    async def api_car_timers_partial_update_with_http_info(
         self,
         vin: StrictStr,
         id: StrictStr,
@@ -2040,11 +2040,11 @@ class CarsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "CommandTimerSetting",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2052,7 +2052,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_car_timers_partial_update_without_preload_content(
+    async def api_car_timers_partial_update_without_preload_content(
         self,
         vin: StrictStr,
         id: StrictStr,
@@ -2114,7 +2114,7 @@ class CarsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "CommandTimerSetting",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2206,7 +2206,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_car_timers_read(
+    async def api_car_timers_read(
         self,
         vin: StrictStr,
         id: StrictStr,
@@ -2264,11 +2264,11 @@ class CarsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "CommandTimerSetting",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2276,7 +2276,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_car_timers_read_with_http_info(
+    async def api_car_timers_read_with_http_info(
         self,
         vin: StrictStr,
         id: StrictStr,
@@ -2334,11 +2334,11 @@ class CarsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "CommandTimerSetting",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2346,7 +2346,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_car_timers_read_without_preload_content(
+    async def api_car_timers_read_without_preload_content(
         self,
         vin: StrictStr,
         id: StrictStr,
@@ -2404,7 +2404,7 @@ class CarsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "CommandTimerSetting",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2480,7 +2480,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_car_timers_update(
+    async def api_car_timers_update(
         self,
         vin: StrictStr,
         id: StrictStr,
@@ -2542,11 +2542,11 @@ class CarsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "CommandTimerSetting",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2554,7 +2554,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_car_timers_update_with_http_info(
+    async def api_car_timers_update_with_http_info(
         self,
         vin: StrictStr,
         id: StrictStr,
@@ -2616,11 +2616,11 @@ class CarsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "CommandTimerSetting",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2628,7 +2628,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_car_timers_update_without_preload_content(
+    async def api_car_timers_update_without_preload_content(
         self,
         vin: StrictStr,
         id: StrictStr,
@@ -2690,7 +2690,7 @@ class CarsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "CommandTimerSetting",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2782,7 +2782,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_car_update(
+    async def api_car_update(
         self,
         vin: StrictStr,
         data: CarUpdating,
@@ -2840,11 +2840,11 @@ class CarsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "Car",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2852,7 +2852,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_car_update_with_http_info(
+    async def api_car_update_with_http_info(
         self,
         vin: StrictStr,
         data: CarUpdating,
@@ -2910,11 +2910,11 @@ class CarsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "Car",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2922,7 +2922,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_car_update_without_preload_content(
+    async def api_car_update_without_preload_content(
         self,
         vin: StrictStr,
         data: CarUpdating,
@@ -2980,7 +2980,7 @@ class CarsApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "Car",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -3069,7 +3069,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_command_create(
+    async def api_command_create(
         self,
         vin: StrictStr,
         data: ApiCommandCreateRequest,
@@ -3132,11 +3132,11 @@ class CarsApi:
             '404': None,
             '400': "CommandError",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -3144,7 +3144,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_command_create_with_http_info(
+    async def api_command_create_with_http_info(
         self,
         vin: StrictStr,
         data: ApiCommandCreateRequest,
@@ -3207,11 +3207,11 @@ class CarsApi:
             '404': None,
             '400': "CommandError",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -3219,7 +3219,7 @@ class CarsApi:
 
 
     @validate_call
-    def api_command_create_without_preload_content(
+    async def api_command_create_without_preload_content(
         self,
         vin: StrictStr,
         data: ApiCommandCreateRequest,
@@ -3282,7 +3282,7 @@ class CarsApi:
             '404': None,
             '400': "CommandError",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

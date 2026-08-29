@@ -17,16 +17,16 @@ import unittest
 from opencarwings_client.api.alerts_api import AlertsApi
 
 
-class TestAlertsApi(unittest.TestCase):
+class TestAlertsApi(unittest.IsolatedAsyncioTestCase):
     """AlertsApi unit test stubs"""
 
-    def setUp(self) -> None:
+    async def asyncSetUp(self) -> None:
         self.api = AlertsApi()
 
-    def tearDown(self) -> None:
-        pass
+    async def asyncTearDown(self) -> None:
+        await self.api.api_client.close()
 
-    def test_api_alerts_read(self) -> None:
+    async def test_api_alerts_read(self) -> None:
         """Test case for api_alerts_read
 
         """

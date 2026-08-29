@@ -17,28 +17,28 @@ import unittest
 from opencarwings_client.api.account_api import AccountApi
 
 
-class TestAccountApi(unittest.TestCase):
+class TestAccountApi(unittest.IsolatedAsyncioTestCase):
     """AccountApi unit test stubs"""
 
-    def setUp(self) -> None:
+    async def asyncSetUp(self) -> None:
         self.api = AccountApi()
 
-    def tearDown(self) -> None:
-        pass
+    async def asyncTearDown(self) -> None:
+        await self.api.api_client.close()
 
-    def test_account_detail_list(self) -> None:
+    async def test_account_detail_list(self) -> None:
         """Test case for account_detail_list
 
         """
         pass
 
-    def test_account_pin_create(self) -> None:
+    async def test_account_pin_create(self) -> None:
         """Test case for account_pin_create
 
         """
         pass
 
-    def test_account_reset_api_key_create(self) -> None:
+    async def test_account_reset_api_key_create(self) -> None:
         """Test case for account_reset_api_key_create
 
         """

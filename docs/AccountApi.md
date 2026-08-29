@@ -49,12 +49,12 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with opencarwings_client.ApiClient(configuration) as api_client:
+async with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = opencarwings_client.AccountApi(api_client)
 
     try:
-        api_response = api_instance.account_detail_list()
+        api_response = await api_instance.account_detail_list()
         print("The response of AccountApi->account_detail_list:\n")
         pprint(api_response)
     except Exception as e:
@@ -129,13 +129,13 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with opencarwings_client.ApiClient(configuration) as api_client:
+async with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = opencarwings_client.AccountApi(api_client)
     data = opencarwings_client.PinChange() # PinChange | 
 
     try:
-        api_instance.account_pin_create(data)
+        await api_instance.account_pin_create(data)
     except Exception as e:
         print("Exception when calling AccountApi->account_pin_create: %s\n" % e)
 ```
@@ -212,12 +212,12 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with opencarwings_client.ApiClient(configuration) as api_client:
+async with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = opencarwings_client.AccountApi(api_client)
 
     try:
-        api_instance.account_reset_api_key_create()
+        await api_instance.account_reset_api_key_create()
     except Exception as e:
         print("Exception when calling AccountApi->account_reset_api_key_create: %s\n" % e)
 ```

@@ -37,7 +37,7 @@ class AccountApi:
 
 
     @validate_call
-    def account_detail_list(
+    async def account_detail_list(
         self,
         _request_timeout: Union[
             None,
@@ -89,11 +89,11 @@ class AccountApi:
             '200': "AccountDetail",
             '401': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -101,7 +101,7 @@ class AccountApi:
 
 
     @validate_call
-    def account_detail_list_with_http_info(
+    async def account_detail_list_with_http_info(
         self,
         _request_timeout: Union[
             None,
@@ -153,11 +153,11 @@ class AccountApi:
             '200': "AccountDetail",
             '401': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -165,7 +165,7 @@ class AccountApi:
 
 
     @validate_call
-    def account_detail_list_without_preload_content(
+    async def account_detail_list_without_preload_content(
         self,
         _request_timeout: Union[
             None,
@@ -217,7 +217,7 @@ class AccountApi:
             '200': "AccountDetail",
             '401': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -287,7 +287,7 @@ class AccountApi:
 
 
     @validate_call
-    def account_pin_create(
+    async def account_pin_create(
         self,
         data: PinChange,
         _request_timeout: Union[
@@ -345,11 +345,11 @@ class AccountApi:
             '401': None,
             '400': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -357,7 +357,7 @@ class AccountApi:
 
 
     @validate_call
-    def account_pin_create_with_http_info(
+    async def account_pin_create_with_http_info(
         self,
         data: PinChange,
         _request_timeout: Union[
@@ -415,11 +415,11 @@ class AccountApi:
             '401': None,
             '400': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -427,7 +427,7 @@ class AccountApi:
 
 
     @validate_call
-    def account_pin_create_without_preload_content(
+    async def account_pin_create_without_preload_content(
         self,
         data: PinChange,
         _request_timeout: Union[
@@ -485,7 +485,7 @@ class AccountApi:
             '401': None,
             '400': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -564,7 +564,7 @@ class AccountApi:
 
 
     @validate_call
-    def account_reset_api_key_create(
+    async def account_reset_api_key_create(
         self,
         _request_timeout: Union[
             None,
@@ -615,11 +615,11 @@ class AccountApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -627,7 +627,7 @@ class AccountApi:
 
 
     @validate_call
-    def account_reset_api_key_create_with_http_info(
+    async def account_reset_api_key_create_with_http_info(
         self,
         _request_timeout: Union[
             None,
@@ -678,11 +678,11 @@ class AccountApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -690,7 +690,7 @@ class AccountApi:
 
 
     @validate_call
-    def account_reset_api_key_create_without_preload_content(
+    async def account_reset_api_key_create_without_preload_content(
         self,
         _request_timeout: Union[
             None,
@@ -741,7 +741,7 @@ class AccountApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

@@ -49,13 +49,13 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with opencarwings_client.ApiClient(configuration) as api_client:
+async with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = opencarwings_client.TokenApi(api_client)
     data = opencarwings_client.JWTTokenObtainPair() # JWTTokenObtainPair | 
 
     try:
-        api_response = api_instance.api_token_obtain_create(data)
+        api_response = await api_instance.api_token_obtain_create(data)
         print("The response of TokenApi->api_token_obtain_create:\n")
         pprint(api_response)
     except Exception as e:
@@ -134,13 +134,13 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with opencarwings_client.ApiClient(configuration) as api_client:
+async with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = opencarwings_client.TokenApi(api_client)
     data = opencarwings_client.TokenRefresh() # TokenRefresh | 
 
     try:
-        api_response = api_instance.api_token_refresh_create(data)
+        api_response = await api_instance.api_token_refresh_create(data)
         print("The response of TokenApi->api_token_refresh_create:\n")
         pprint(api_response)
     except Exception as e:
@@ -217,13 +217,13 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with opencarwings_client.ApiClient(configuration) as api_client:
+async with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = opencarwings_client.TokenApi(api_client)
     data = opencarwings_client.TokenBlacklist() # TokenBlacklist | 
 
     try:
-        api_instance.api_token_signout_create(data)
+        await api_instance.api_token_signout_create(data)
     except Exception as e:
         print("Exception when calling TokenApi->api_token_signout_create: %s\n" % e)
 ```
@@ -301,13 +301,13 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with opencarwings_client.ApiClient(configuration) as api_client:
+async with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = opencarwings_client.TokenApi(api_client)
     data = opencarwings_client.TokenMetadataUpdate() # TokenMetadataUpdate | 
 
     try:
-        api_response = api_instance.api_token_update_create(data)
+        api_response = await api_instance.api_token_update_create(data)
         print("The response of TokenApi->api_token_update_create:\n")
         pprint(api_response)
     except Exception as e:

@@ -17,16 +17,16 @@ import unittest
 from opencarwings_client.api.api_api import ApiApi
 
 
-class TestApiApi(unittest.TestCase):
+class TestApiApi(unittest.IsolatedAsyncioTestCase):
     """ApiApi unit test stubs"""
 
-    def setUp(self) -> None:
+    async def asyncSetUp(self) -> None:
         self.api = ApiApi()
 
-    def tearDown(self) -> None:
-        pass
+    async def asyncTearDown(self) -> None:
+        await self.api.api_client.close()
 
-    def test_api_probe_location_read(self) -> None:
+    async def test_api_probe_location_read(self) -> None:
         """Test case for api_probe_location_read
 
         """

@@ -44,13 +44,13 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with opencarwings_client.ApiClient(configuration) as api_client:
+async with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = opencarwings_client.ApiApi(api_client)
     vin = 'vin_example' # str | 
 
     try:
-        api_instance.api_probe_location_read(vin)
+        await api_instance.api_probe_location_read(vin)
     except Exception as e:
         print("Exception when calling ApiApi->api_probe_location_read: %s\n" % e)
 ```

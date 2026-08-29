@@ -55,13 +55,13 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with opencarwings_client.ApiClient(configuration) as api_client:
+async with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = opencarwings_client.CarsApi(api_client)
     vin = 'vin_example' # str | 
 
     try:
-        api_instance.api_car_delete(vin)
+        await api_instance.api_car_delete(vin)
     except Exception as e:
         print("Exception when calling CarsApi->api_car_delete: %s\n" % e)
 ```
@@ -136,12 +136,12 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with opencarwings_client.ApiClient(configuration) as api_client:
+async with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = opencarwings_client.CarsApi(api_client)
 
     try:
-        api_response = api_instance.api_car_list()
+        api_response = await api_instance.api_car_list()
         print("The response of CarsApi->api_car_list:\n")
         pprint(api_response)
     except Exception as e:
@@ -215,14 +215,14 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with opencarwings_client.ApiClient(configuration) as api_client:
+async with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = opencarwings_client.CarsApi(api_client)
     vin = 'vin_example' # str | 
     data = opencarwings_client.CarUpdating() # CarUpdating | 
 
     try:
-        api_response = api_instance.api_car_partial_update(vin, data)
+        api_response = await api_instance.api_car_partial_update(vin, data)
         print("The response of CarsApi->api_car_partial_update:\n")
         pprint(api_response)
     except Exception as e:
@@ -298,13 +298,13 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with opencarwings_client.ApiClient(configuration) as api_client:
+async with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = opencarwings_client.CarsApi(api_client)
     vin = 'vin_example' # str | 
 
     try:
-        api_response = api_instance.api_car_read(vin)
+        api_response = await api_instance.api_car_read(vin)
         print("The response of CarsApi->api_car_read:\n")
         pprint(api_response)
     except Exception as e:
@@ -379,14 +379,14 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with opencarwings_client.ApiClient(configuration) as api_client:
+async with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = opencarwings_client.CarsApi(api_client)
     vin = 'vin_example' # str | 
     data = opencarwings_client.CommandTimerSetting() # CommandTimerSetting | 
 
     try:
-        api_response = api_instance.api_car_timers_create(vin, data)
+        api_response = await api_instance.api_car_timers_create(vin, data)
         print("The response of CarsApi->api_car_timers_create:\n")
         pprint(api_response)
     except Exception as e:
@@ -461,14 +461,14 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with opencarwings_client.ApiClient(configuration) as api_client:
+async with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = opencarwings_client.CarsApi(api_client)
     vin = 'vin_example' # str | 
     id = 'id_example' # str | 
 
     try:
-        api_instance.api_car_timers_delete(vin, id)
+        await api_instance.api_car_timers_delete(vin, id)
     except Exception as e:
         print("Exception when calling CarsApi->api_car_timers_delete: %s\n" % e)
 ```
@@ -542,13 +542,13 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with opencarwings_client.ApiClient(configuration) as api_client:
+async with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = opencarwings_client.CarsApi(api_client)
     vin = 'vin_example' # str | 
 
     try:
-        api_response = api_instance.api_car_timers_list(vin)
+        api_response = await api_instance.api_car_timers_list(vin)
         print("The response of CarsApi->api_car_timers_list:\n")
         pprint(api_response)
     except Exception as e:
@@ -623,7 +623,7 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with opencarwings_client.ApiClient(configuration) as api_client:
+async with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = opencarwings_client.CarsApi(api_client)
     vin = 'vin_example' # str | 
@@ -631,7 +631,7 @@ with opencarwings_client.ApiClient(configuration) as api_client:
     data = opencarwings_client.CommandTimerSetting() # CommandTimerSetting | 
 
     try:
-        api_response = api_instance.api_car_timers_partial_update(vin, id, data)
+        api_response = await api_instance.api_car_timers_partial_update(vin, id, data)
         print("The response of CarsApi->api_car_timers_partial_update:\n")
         pprint(api_response)
     except Exception as e:
@@ -708,14 +708,14 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with opencarwings_client.ApiClient(configuration) as api_client:
+async with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = opencarwings_client.CarsApi(api_client)
     vin = 'vin_example' # str | 
     id = 'id_example' # str | 
 
     try:
-        api_response = api_instance.api_car_timers_read(vin, id)
+        api_response = await api_instance.api_car_timers_read(vin, id)
         print("The response of CarsApi->api_car_timers_read:\n")
         pprint(api_response)
     except Exception as e:
@@ -791,7 +791,7 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with opencarwings_client.ApiClient(configuration) as api_client:
+async with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = opencarwings_client.CarsApi(api_client)
     vin = 'vin_example' # str | 
@@ -799,7 +799,7 @@ with opencarwings_client.ApiClient(configuration) as api_client:
     data = opencarwings_client.CommandTimerSetting() # CommandTimerSetting | 
 
     try:
-        api_response = api_instance.api_car_timers_update(vin, id, data)
+        api_response = await api_instance.api_car_timers_update(vin, id, data)
         print("The response of CarsApi->api_car_timers_update:\n")
         pprint(api_response)
     except Exception as e:
@@ -877,14 +877,14 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with opencarwings_client.ApiClient(configuration) as api_client:
+async with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = opencarwings_client.CarsApi(api_client)
     vin = 'vin_example' # str | 
     data = opencarwings_client.CarUpdating() # CarUpdating | 
 
     try:
-        api_response = api_instance.api_car_update(vin, data)
+        api_response = await api_instance.api_car_update(vin, data)
         print("The response of CarsApi->api_car_update:\n")
         pprint(api_response)
     except Exception as e:
@@ -963,14 +963,14 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with opencarwings_client.ApiClient(configuration) as api_client:
+async with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = opencarwings_client.CarsApi(api_client)
     vin = 'vin_example' # str | 
     data = opencarwings_client.ApiCommandCreateRequest() # ApiCommandCreateRequest | 
 
     try:
-        api_response = api_instance.api_command_create(vin, data)
+        api_response = await api_instance.api_command_create(vin, data)
         print("The response of CarsApi->api_command_create:\n")
         pprint(api_response)
     except Exception as e:

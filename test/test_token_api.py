@@ -17,34 +17,34 @@ import unittest
 from opencarwings_client.api.token_api import TokenApi
 
 
-class TestTokenApi(unittest.TestCase):
+class TestTokenApi(unittest.IsolatedAsyncioTestCase):
     """TokenApi unit test stubs"""
 
-    def setUp(self) -> None:
+    async def asyncSetUp(self) -> None:
         self.api = TokenApi()
 
-    def tearDown(self) -> None:
-        pass
+    async def asyncTearDown(self) -> None:
+        await self.api.api_client.close()
 
-    def test_api_token_obtain_create(self) -> None:
+    async def test_api_token_obtain_create(self) -> None:
         """Test case for api_token_obtain_create
 
         """
         pass
 
-    def test_api_token_refresh_create(self) -> None:
+    async def test_api_token_refresh_create(self) -> None:
         """Test case for api_token_refresh_create
 
         """
         pass
 
-    def test_api_token_signout_create(self) -> None:
+    async def test_api_token_signout_create(self) -> None:
         """Test case for api_token_signout_create
 
         """
         pass
 
-    def test_api_token_update_create(self) -> None:
+    async def test_api_token_update_create(self) -> None:
         """Test case for api_token_update_create
 
         """

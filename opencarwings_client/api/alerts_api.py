@@ -38,7 +38,7 @@ class AlertsApi:
 
 
     @validate_call
-    def api_alerts_read(
+    async def api_alerts_read(
         self,
         vin: StrictStr,
         _request_timeout: Union[
@@ -95,11 +95,11 @@ class AlertsApi:
             '401': None,
             '404': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -107,7 +107,7 @@ class AlertsApi:
 
 
     @validate_call
-    def api_alerts_read_with_http_info(
+    async def api_alerts_read_with_http_info(
         self,
         vin: StrictStr,
         _request_timeout: Union[
@@ -164,11 +164,11 @@ class AlertsApi:
             '401': None,
             '404': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -176,7 +176,7 @@ class AlertsApi:
 
 
     @validate_call
-    def api_alerts_read_without_preload_content(
+    async def api_alerts_read_without_preload_content(
         self,
         vin: StrictStr,
         _request_timeout: Union[
@@ -233,7 +233,7 @@ class AlertsApi:
             '401': None,
             '404': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

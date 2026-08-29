@@ -48,13 +48,13 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with opencarwings_client.ApiClient(configuration) as api_client:
+async with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = opencarwings_client.MaplinkApi(api_client)
     data = opencarwings_client.MapLinkResolverInput() # MapLinkResolverInput | 
 
     try:
-        api_response = api_instance.api_maplink_resolve_create(data)
+        api_response = await api_instance.api_maplink_resolve_create(data)
         print("The response of MaplinkApi->api_maplink_resolve_create:\n")
         pprint(api_response)
     except Exception as e:

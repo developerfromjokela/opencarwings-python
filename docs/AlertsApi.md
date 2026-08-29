@@ -47,13 +47,13 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with opencarwings_client.ApiClient(configuration) as api_client:
+async with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = opencarwings_client.AlertsApi(api_client)
     vin = 'vin_example' # str | 
 
     try:
-        api_response = api_instance.api_alerts_read(vin)
+        api_response = await api_instance.api_alerts_read(vin)
         print("The response of AlertsApi->api_alerts_read:\n")
         pprint(api_response)
     except Exception as e:

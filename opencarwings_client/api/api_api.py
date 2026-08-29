@@ -36,7 +36,7 @@ class ApiApi:
 
 
     @validate_call
-    def api_probe_location_read(
+    async def api_probe_location_read(
         self,
         vin: StrictStr,
         _request_timeout: Union[
@@ -90,11 +90,11 @@ class ApiApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -102,7 +102,7 @@ class ApiApi:
 
 
     @validate_call
-    def api_probe_location_read_with_http_info(
+    async def api_probe_location_read_with_http_info(
         self,
         vin: StrictStr,
         _request_timeout: Union[
@@ -156,11 +156,11 @@ class ApiApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -168,7 +168,7 @@ class ApiApi:
 
 
     @validate_call
-    def api_probe_location_read_without_preload_content(
+    async def api_probe_location_read_without_preload_content(
         self,
         vin: StrictStr,
         _request_timeout: Union[
@@ -222,7 +222,7 @@ class ApiApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

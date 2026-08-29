@@ -17,82 +17,82 @@ import unittest
 from opencarwings_client.api.cars_api import CarsApi
 
 
-class TestCarsApi(unittest.TestCase):
+class TestCarsApi(unittest.IsolatedAsyncioTestCase):
     """CarsApi unit test stubs"""
 
-    def setUp(self) -> None:
+    async def asyncSetUp(self) -> None:
         self.api = CarsApi()
 
-    def tearDown(self) -> None:
-        pass
+    async def asyncTearDown(self) -> None:
+        await self.api.api_client.close()
 
-    def test_api_car_delete(self) -> None:
+    async def test_api_car_delete(self) -> None:
         """Test case for api_car_delete
 
         """
         pass
 
-    def test_api_car_list(self) -> None:
+    async def test_api_car_list(self) -> None:
         """Test case for api_car_list
 
         """
         pass
 
-    def test_api_car_partial_update(self) -> None:
+    async def test_api_car_partial_update(self) -> None:
         """Test case for api_car_partial_update
 
         """
         pass
 
-    def test_api_car_read(self) -> None:
+    async def test_api_car_read(self) -> None:
         """Test case for api_car_read
 
         """
         pass
 
-    def test_api_car_timers_create(self) -> None:
+    async def test_api_car_timers_create(self) -> None:
         """Test case for api_car_timers_create
 
         """
         pass
 
-    def test_api_car_timers_delete(self) -> None:
+    async def test_api_car_timers_delete(self) -> None:
         """Test case for api_car_timers_delete
 
         """
         pass
 
-    def test_api_car_timers_list(self) -> None:
+    async def test_api_car_timers_list(self) -> None:
         """Test case for api_car_timers_list
 
         """
         pass
 
-    def test_api_car_timers_partial_update(self) -> None:
+    async def test_api_car_timers_partial_update(self) -> None:
         """Test case for api_car_timers_partial_update
 
         """
         pass
 
-    def test_api_car_timers_read(self) -> None:
+    async def test_api_car_timers_read(self) -> None:
         """Test case for api_car_timers_read
 
         """
         pass
 
-    def test_api_car_timers_update(self) -> None:
+    async def test_api_car_timers_update(self) -> None:
         """Test case for api_car_timers_update
 
         """
         pass
 
-    def test_api_car_update(self) -> None:
+    async def test_api_car_update(self) -> None:
         """Test case for api_car_update
 
         """
         pass
 
-    def test_api_command_create(self) -> None:
+    async def test_api_command_create(self) -> None:
         """Test case for api_command_create
 
         """

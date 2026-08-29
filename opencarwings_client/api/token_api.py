@@ -41,7 +41,7 @@ class TokenApi:
 
 
     @validate_call
-    def api_token_obtain_create(
+    async def api_token_obtain_create(
         self,
         data: JWTTokenObtainPair,
         _request_timeout: Union[
@@ -96,11 +96,11 @@ class TokenApi:
             '200': "JWTTokenLogin",
             '401': "APIError",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -108,7 +108,7 @@ class TokenApi:
 
 
     @validate_call
-    def api_token_obtain_create_with_http_info(
+    async def api_token_obtain_create_with_http_info(
         self,
         data: JWTTokenObtainPair,
         _request_timeout: Union[
@@ -163,11 +163,11 @@ class TokenApi:
             '200': "JWTTokenLogin",
             '401': "APIError",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -175,7 +175,7 @@ class TokenApi:
 
 
     @validate_call
-    def api_token_obtain_create_without_preload_content(
+    async def api_token_obtain_create_without_preload_content(
         self,
         data: JWTTokenObtainPair,
         _request_timeout: Union[
@@ -230,7 +230,7 @@ class TokenApi:
             '200': "JWTTokenLogin",
             '401': "APIError",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -316,7 +316,7 @@ class TokenApi:
 
 
     @validate_call
-    def api_token_refresh_create(
+    async def api_token_refresh_create(
         self,
         data: TokenRefresh,
         _request_timeout: Union[
@@ -371,11 +371,11 @@ class TokenApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '201': "TokenRefresh",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -383,7 +383,7 @@ class TokenApi:
 
 
     @validate_call
-    def api_token_refresh_create_with_http_info(
+    async def api_token_refresh_create_with_http_info(
         self,
         data: TokenRefresh,
         _request_timeout: Union[
@@ -438,11 +438,11 @@ class TokenApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '201': "TokenRefresh",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -450,7 +450,7 @@ class TokenApi:
 
 
     @validate_call
-    def api_token_refresh_create_without_preload_content(
+    async def api_token_refresh_create_without_preload_content(
         self,
         data: TokenRefresh,
         _request_timeout: Union[
@@ -505,7 +505,7 @@ class TokenApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '201': "TokenRefresh",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -591,7 +591,7 @@ class TokenApi:
 
 
     @validate_call
-    def api_token_signout_create(
+    async def api_token_signout_create(
         self,
         data: TokenBlacklist,
         _request_timeout: Union[
@@ -648,11 +648,11 @@ class TokenApi:
             '401': None,
             '400': "CommandError",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -660,7 +660,7 @@ class TokenApi:
 
 
     @validate_call
-    def api_token_signout_create_with_http_info(
+    async def api_token_signout_create_with_http_info(
         self,
         data: TokenBlacklist,
         _request_timeout: Union[
@@ -717,11 +717,11 @@ class TokenApi:
             '401': None,
             '400': "CommandError",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -729,7 +729,7 @@ class TokenApi:
 
 
     @validate_call
-    def api_token_signout_create_without_preload_content(
+    async def api_token_signout_create_without_preload_content(
         self,
         data: TokenBlacklist,
         _request_timeout: Union[
@@ -786,7 +786,7 @@ class TokenApi:
             '401': None,
             '400': "CommandError",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -872,7 +872,7 @@ class TokenApi:
 
 
     @validate_call
-    def api_token_update_create(
+    async def api_token_update_create(
         self,
         data: TokenMetadataUpdate,
         _request_timeout: Union[
@@ -929,11 +929,11 @@ class TokenApi:
             '401': None,
             '400': "CommandError",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -941,7 +941,7 @@ class TokenApi:
 
 
     @validate_call
-    def api_token_update_create_with_http_info(
+    async def api_token_update_create_with_http_info(
         self,
         data: TokenMetadataUpdate,
         _request_timeout: Union[
@@ -998,11 +998,11 @@ class TokenApi:
             '401': None,
             '400': "CommandError",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1010,7 +1010,7 @@ class TokenApi:
 
 
     @validate_call
-    def api_token_update_create_without_preload_content(
+    async def api_token_update_create_without_preload_content(
         self,
         data: TokenMetadataUpdate,
         _request_timeout: Union[
@@ -1067,7 +1067,7 @@ class TokenApi:
             '401': None,
             '400': "CommandError",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

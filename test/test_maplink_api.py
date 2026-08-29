@@ -17,16 +17,16 @@ import unittest
 from opencarwings_client.api.maplink_api import MaplinkApi
 
 
-class TestMaplinkApi(unittest.TestCase):
+class TestMaplinkApi(unittest.IsolatedAsyncioTestCase):
     """MaplinkApi unit test stubs"""
 
-    def setUp(self) -> None:
+    async def asyncSetUp(self) -> None:
         self.api = MaplinkApi()
 
-    def tearDown(self) -> None:
-        pass
+    async def asyncTearDown(self) -> None:
+        await self.api.api_client.close()
 
-    def test_api_maplink_resolve_create(self) -> None:
+    async def test_api_maplink_resolve_create(self) -> None:
         """Test case for api_maplink_resolve_create
 
         """
