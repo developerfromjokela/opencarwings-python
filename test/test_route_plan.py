@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.route_plan import RoutePlan
+from opencarwings_client.models.route_plan import RoutePlan
 
 class TestRoutePlan(unittest.TestCase):
     """RoutePlan unit test stubs"""

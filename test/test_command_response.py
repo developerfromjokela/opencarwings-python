@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.command_response import CommandResponse
+from opencarwings_client.models.command_response import CommandResponse
 
 class TestCommandResponse(unittest.TestCase):
     """CommandResponse unit test stubs"""
@@ -36,9 +36,9 @@ class TestCommandResponse(unittest.TestCase):
         if include_optional:
             return CommandResponse(
                 message = '0',
-                car = openapi_client.models.car.Car(
+                car = opencarwings_client.models.car.Car(
                     id = 56, 
-                    tcu_configuration = openapi_client.models.tcu_configuration.TCUConfiguration(
+                    tcu_configuration = opencarwings_client.models.tcu_configuration.TCUConfiguration(
                         id = 56, 
                         last_updated = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         dial_code = '', 
@@ -50,14 +50,14 @@ class TestCommandResponse(unittest.TestCase):
                         server_url = '', 
                         proxy_url = '', 
                         connection_type = '', 
-                        ficosa_config = openapi_client.models.ficosa_config.Ficosa config(), ), 
-                    location = openapi_client.models.location_info.LocationInfo(
+                        ficosa_config = opencarwings_client.models.ficosa_config.Ficosa config(), ), 
+                    location = opencarwings_client.models.location_info.LocationInfo(
                         id = 56, 
                         last_updated = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         lat = '', 
                         lon = '', 
                         home = True, ), 
-                    ev_info = openapi_client.models.ev_info.EVInfo(
+                    ev_info = opencarwings_client.models.ev_info.EVInfo(
                         id = 56, 
                         last_updated = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         range_acon = -2147483648, 
@@ -88,12 +88,12 @@ class TestCommandResponse(unittest.TestCase):
                         obc_6kw_avail = True, 
                         batt_heater_avail = True, 
                         batt_heater_status = True, ), 
-                    veh_health = openapi_client.models.vehicle_health_info.VehicleHealthInfo(
+                    veh_health = opencarwings_client.models.vehicle_health_info.VehicleHealthInfo(
                         id = 56, 
                         last_updated = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         dtc_timestamp = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
-                        dtc_short = openapi_client.models.dtc_short.Dtc short(), 
-                        dtc_long = openapi_client.models.dtc_long.Dtc long(), 
+                        dtc_short = opencarwings_client.models.dtc_short.Dtc short(), 
+                        dtc_long = opencarwings_client.models.dtc_long.Dtc long(), 
                         tpms_light = True, 
                         tpms_fr = -2147483648, 
                         tpms_fl = -2147483648, 
@@ -102,21 +102,21 @@ class TestCommandResponse(unittest.TestCase):
                         maintenance_alert = True, 
                         mileage = 1.337, ), 
                     send_to_car_location_all = [
-                        openapi_client.models.send_to_car_location.SendToCarLocation(
+                        opencarwings_client.models.send_to_car_location.SendToCarLocation(
                             id = 56, 
                             lat = '', 
                             lon = '', 
                             name = '0', 
                             created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), )
                         ], 
-                    send_to_car_location = openapi_client.models.send_to_car_location.SendToCarLocation(
+                    send_to_car_location = opencarwings_client.models.send_to_car_location.SendToCarLocation(
                         id = 56, 
                         lat = '', 
                         lon = '', 
                         name = '0', 
                         created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), ), 
                     route_plans = [
-                        openapi_client.models.route_plan.RoutePlan(
+                        opencarwings_client.models.route_plan.RoutePlan(
                             id = 56, 
                             name = '0', 
                             created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
@@ -145,7 +145,7 @@ class TestCommandResponse(unittest.TestCase):
                     command_type_display = '0', 
                     command_result_display = '0', 
                     timer_commands = [
-                        openapi_client.models.command_timer_setting.CommandTimerSetting(
+                        opencarwings_client.models.command_timer_setting.CommandTimerSetting(
                             id = 56, 
                             command_type_display = '', 
                             last_command_result_display = '', 
@@ -177,7 +177,7 @@ class TestCommandResponse(unittest.TestCase):
                     command_pin_enforced = True, 
                     vin = '0', 
                     nickname = '0', 
-                    sms_config = openapi_client.models.sms_config.Sms config(), 
+                    sms_config = opencarwings_client.models.sms_config.Sms config(), 
                     color = 'l_coulisred', 
                     vehicle_code1 = -2147483648, 
                     vehicle_code2 = -2147483648, 
@@ -195,7 +195,7 @@ class TestCommandResponse(unittest.TestCase):
                     command_id = -2147483648, 
                     command_result = 56, 
                     command_requested = True, 
-                    command_payload = openapi_client.models.command_payload.Command payload(), 
+                    command_payload = opencarwings_client.models.command_payload.Command payload(), 
                     command_type = 56, 
                     carrier = '0', 
                     signal_level = -2147483648, 
@@ -203,8 +203,8 @@ class TestCommandResponse(unittest.TestCase):
                     navi_version = '', 
                     map_version = '', 
                     tcu_version = '', 
-                    favorite_channels = openapi_client.models.favorite_channels.Favorite channels(), 
-                    custom_channels = openapi_client.models.custom_channels.Custom channels(), 
+                    favorite_channels = opencarwings_client.models.favorite_channels.Favorite channels(), 
+                    custom_channels = opencarwings_client.models.custom_channels.Custom channels(), 
                     hmac_key = '', 
                     tcu_type = 'continental2012', 
                     owner = 56, )
@@ -212,9 +212,9 @@ class TestCommandResponse(unittest.TestCase):
         else:
             return CommandResponse(
                 message = '0',
-                car = openapi_client.models.car.Car(
+                car = opencarwings_client.models.car.Car(
                     id = 56, 
-                    tcu_configuration = openapi_client.models.tcu_configuration.TCUConfiguration(
+                    tcu_configuration = opencarwings_client.models.tcu_configuration.TCUConfiguration(
                         id = 56, 
                         last_updated = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         dial_code = '', 
@@ -226,14 +226,14 @@ class TestCommandResponse(unittest.TestCase):
                         server_url = '', 
                         proxy_url = '', 
                         connection_type = '', 
-                        ficosa_config = openapi_client.models.ficosa_config.Ficosa config(), ), 
-                    location = openapi_client.models.location_info.LocationInfo(
+                        ficosa_config = opencarwings_client.models.ficosa_config.Ficosa config(), ), 
+                    location = opencarwings_client.models.location_info.LocationInfo(
                         id = 56, 
                         last_updated = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         lat = '', 
                         lon = '', 
                         home = True, ), 
-                    ev_info = openapi_client.models.ev_info.EVInfo(
+                    ev_info = opencarwings_client.models.ev_info.EVInfo(
                         id = 56, 
                         last_updated = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         range_acon = -2147483648, 
@@ -264,12 +264,12 @@ class TestCommandResponse(unittest.TestCase):
                         obc_6kw_avail = True, 
                         batt_heater_avail = True, 
                         batt_heater_status = True, ), 
-                    veh_health = openapi_client.models.vehicle_health_info.VehicleHealthInfo(
+                    veh_health = opencarwings_client.models.vehicle_health_info.VehicleHealthInfo(
                         id = 56, 
                         last_updated = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         dtc_timestamp = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
-                        dtc_short = openapi_client.models.dtc_short.Dtc short(), 
-                        dtc_long = openapi_client.models.dtc_long.Dtc long(), 
+                        dtc_short = opencarwings_client.models.dtc_short.Dtc short(), 
+                        dtc_long = opencarwings_client.models.dtc_long.Dtc long(), 
                         tpms_light = True, 
                         tpms_fr = -2147483648, 
                         tpms_fl = -2147483648, 
@@ -278,21 +278,21 @@ class TestCommandResponse(unittest.TestCase):
                         maintenance_alert = True, 
                         mileage = 1.337, ), 
                     send_to_car_location_all = [
-                        openapi_client.models.send_to_car_location.SendToCarLocation(
+                        opencarwings_client.models.send_to_car_location.SendToCarLocation(
                             id = 56, 
                             lat = '', 
                             lon = '', 
                             name = '0', 
                             created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), )
                         ], 
-                    send_to_car_location = openapi_client.models.send_to_car_location.SendToCarLocation(
+                    send_to_car_location = opencarwings_client.models.send_to_car_location.SendToCarLocation(
                         id = 56, 
                         lat = '', 
                         lon = '', 
                         name = '0', 
                         created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), ), 
                     route_plans = [
-                        openapi_client.models.route_plan.RoutePlan(
+                        opencarwings_client.models.route_plan.RoutePlan(
                             id = 56, 
                             name = '0', 
                             created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
@@ -321,7 +321,7 @@ class TestCommandResponse(unittest.TestCase):
                     command_type_display = '0', 
                     command_result_display = '0', 
                     timer_commands = [
-                        openapi_client.models.command_timer_setting.CommandTimerSetting(
+                        opencarwings_client.models.command_timer_setting.CommandTimerSetting(
                             id = 56, 
                             command_type_display = '', 
                             last_command_result_display = '', 
@@ -353,7 +353,7 @@ class TestCommandResponse(unittest.TestCase):
                     command_pin_enforced = True, 
                     vin = '0', 
                     nickname = '0', 
-                    sms_config = openapi_client.models.sms_config.Sms config(), 
+                    sms_config = opencarwings_client.models.sms_config.Sms config(), 
                     color = 'l_coulisred', 
                     vehicle_code1 = -2147483648, 
                     vehicle_code2 = -2147483648, 
@@ -371,7 +371,7 @@ class TestCommandResponse(unittest.TestCase):
                     command_id = -2147483648, 
                     command_result = 56, 
                     command_requested = True, 
-                    command_payload = openapi_client.models.command_payload.Command payload(), 
+                    command_payload = opencarwings_client.models.command_payload.Command payload(), 
                     command_type = 56, 
                     carrier = '0', 
                     signal_level = -2147483648, 
@@ -379,8 +379,8 @@ class TestCommandResponse(unittest.TestCase):
                     navi_version = '', 
                     map_version = '', 
                     tcu_version = '', 
-                    favorite_channels = openapi_client.models.favorite_channels.Favorite channels(), 
-                    custom_channels = openapi_client.models.custom_channels.Custom channels(), 
+                    favorite_channels = opencarwings_client.models.favorite_channels.Favorite channels(), 
+                    custom_channels = opencarwings_client.models.custom_channels.Custom channels(), 
                     hmac_key = '', 
                     tcu_type = 'continental2012', 
                     owner = 56, ),

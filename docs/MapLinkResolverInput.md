@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.map_link_resolver_input import MapLinkResolverInput
+from opencarwings_client.models.map_link_resolver_input import MapLinkResolverInput
 
 # TODO update the JSON string below
 json = "{}"

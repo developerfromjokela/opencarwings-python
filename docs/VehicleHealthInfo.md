@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.vehicle_health_info import VehicleHealthInfo
+from opencarwings_client.models.vehicle_health_info import VehicleHealthInfo
 
 # TODO update the JSON string below
 json = "{}"

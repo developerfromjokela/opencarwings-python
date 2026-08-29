@@ -28,7 +28,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.command_timer_setting import CommandTimerSetting
+from opencarwings_client.models.command_timer_setting import CommandTimerSetting
 
 # TODO update the JSON string below
 json = "{}"

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.map_link_resolver_response import MapLinkResolverResponse
+from opencarwings_client.models.map_link_resolver_response import MapLinkResolverResponse
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.api_command_create_request import ApiCommandCreateRequest
+from opencarwings_client.models.api_command_create_request import ApiCommandCreateRequest
 
 class TestApiCommandCreateRequest(unittest.TestCase):
     """ApiCommandCreateRequest unit test stubs"""

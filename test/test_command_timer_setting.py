@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.command_timer_setting import CommandTimerSetting
+from opencarwings_client.models.command_timer_setting import CommandTimerSetting
 
 class TestCommandTimerSetting(unittest.TestCase):
     """CommandTimerSetting unit test stubs"""

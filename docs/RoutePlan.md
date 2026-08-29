@@ -33,7 +33,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.route_plan import RoutePlan
+from opencarwings_client.models.route_plan import RoutePlan
 
 # TODO update the JSON string below
 json = "{}"

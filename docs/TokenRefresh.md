@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.token_refresh import TokenRefresh
+from opencarwings_client.models.token_refresh import TokenRefresh
 
 # TODO update the JSON string below
 json = "{}"

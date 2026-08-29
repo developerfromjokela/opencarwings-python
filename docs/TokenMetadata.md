@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.token_metadata import TokenMetadata
+from opencarwings_client.models.token_metadata import TokenMetadata
 
 # TODO update the JSON string below
 json = "{}"

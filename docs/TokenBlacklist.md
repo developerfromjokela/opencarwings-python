@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.token_blacklist import TokenBlacklist
+from opencarwings_client.models.token_blacklist import TokenBlacklist
 
 # TODO update the JSON string below
 json = "{}"

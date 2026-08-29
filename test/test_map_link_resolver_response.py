@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.map_link_resolver_response import MapLinkResolverResponse
+from opencarwings_client.models.map_link_resolver_response import MapLinkResolverResponse
 
 class TestMapLinkResolverResponse(unittest.TestCase):
     """MapLinkResolverResponse unit test stubs"""
@@ -37,7 +37,7 @@ class TestMapLinkResolverResponse(unittest.TestCase):
             return MapLinkResolverResponse(
                 status = True,
                 cause = '0',
-                location = openapi_client.models.map_link_resolved_location.MapLinkResolvedLocation(
+                location = opencarwings_client.models.map_link_resolved_location.MapLinkResolvedLocation(
                     lat = '', 
                     lon = '', 
                     name = '0', 

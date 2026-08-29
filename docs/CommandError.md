@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.command_error import CommandError
+from opencarwings_client.models.command_error import CommandError
 
 # TODO update the JSON string below
 json = "{}"

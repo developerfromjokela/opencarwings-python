@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.jwt_token_obtain_pair import JWTTokenObtainPair
+from opencarwings_client.models.jwt_token_obtain_pair import JWTTokenObtainPair
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.token_metadata import TokenMetadata
+from opencarwings_client.models.token_metadata import TokenMetadata
 
 class TestTokenMetadata(unittest.TestCase):
     """TokenMetadata unit test stubs"""

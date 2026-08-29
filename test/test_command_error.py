@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.command_error import CommandError
+from opencarwings_client.models.command_error import CommandError
 
 class TestCommandError(unittest.TestCase):
     """CommandError unit test stubs"""

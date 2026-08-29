@@ -1,4 +1,4 @@
-# openapi_client.CarsApi
+# opencarwings_client.CarsApi
 
 All URIs are relative to *https://opencarwings.viaaq.eu*
 
@@ -27,13 +27,13 @@ Method | HTTP request | Description
 * Api Key Authentication (Personal API Key):
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import opencarwings_client
+from opencarwings_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://opencarwings.viaaq.eu
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = opencarwings_client.Configuration(
     host = "https://opencarwings.viaaq.eu"
 )
 
@@ -55,9 +55,9 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CarsApi(api_client)
+    api_instance = opencarwings_client.CarsApi(api_client)
     vin = 'vin_example' # str | 
 
     try:
@@ -107,14 +107,14 @@ Retrieve a list of cars
 * Api Key Authentication (Personal API Key):
 
 ```python
-import openapi_client
-from openapi_client.models.car_serializer_list import CarSerializerList
-from openapi_client.rest import ApiException
+import opencarwings_client
+from opencarwings_client.models.car_serializer_list import CarSerializerList
+from opencarwings_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://opencarwings.viaaq.eu
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = opencarwings_client.Configuration(
     host = "https://opencarwings.viaaq.eu"
 )
 
@@ -136,9 +136,9 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CarsApi(api_client)
+    api_instance = opencarwings_client.CarsApi(api_client)
 
     try:
         api_response = api_instance.api_car_list()
@@ -185,15 +185,15 @@ This endpoint does not need any parameter.
 * Api Key Authentication (Personal API Key):
 
 ```python
-import openapi_client
-from openapi_client.models.car import Car
-from openapi_client.models.car_updating import CarUpdating
-from openapi_client.rest import ApiException
+import opencarwings_client
+from opencarwings_client.models.car import Car
+from opencarwings_client.models.car_updating import CarUpdating
+from opencarwings_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://opencarwings.viaaq.eu
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = opencarwings_client.Configuration(
     host = "https://opencarwings.viaaq.eu"
 )
 
@@ -215,11 +215,11 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CarsApi(api_client)
+    api_instance = opencarwings_client.CarsApi(api_client)
     vin = 'vin_example' # str | 
-    data = openapi_client.CarUpdating() # CarUpdating | 
+    data = opencarwings_client.CarUpdating() # CarUpdating | 
 
     try:
         api_response = api_instance.api_car_partial_update(vin, data)
@@ -269,14 +269,14 @@ Name | Type | Description  | Notes
 * Api Key Authentication (Personal API Key):
 
 ```python
-import openapi_client
-from openapi_client.models.car import Car
-from openapi_client.rest import ApiException
+import opencarwings_client
+from opencarwings_client.models.car import Car
+from opencarwings_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://opencarwings.viaaq.eu
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = opencarwings_client.Configuration(
     host = "https://opencarwings.viaaq.eu"
 )
 
@@ -298,9 +298,9 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CarsApi(api_client)
+    api_instance = opencarwings_client.CarsApi(api_client)
     vin = 'vin_example' # str | 
 
     try:
@@ -350,14 +350,14 @@ Name | Type | Description  | Notes
 * Api Key Authentication (Personal API Key):
 
 ```python
-import openapi_client
-from openapi_client.models.command_timer_setting import CommandTimerSetting
-from openapi_client.rest import ApiException
+import opencarwings_client
+from opencarwings_client.models.command_timer_setting import CommandTimerSetting
+from opencarwings_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://opencarwings.viaaq.eu
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = opencarwings_client.Configuration(
     host = "https://opencarwings.viaaq.eu"
 )
 
@@ -379,11 +379,11 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CarsApi(api_client)
+    api_instance = opencarwings_client.CarsApi(api_client)
     vin = 'vin_example' # str | 
-    data = openapi_client.CommandTimerSetting() # CommandTimerSetting | 
+    data = opencarwings_client.CommandTimerSetting() # CommandTimerSetting | 
 
     try:
         api_response = api_instance.api_car_timers_create(vin, data)
@@ -433,13 +433,13 @@ Name | Type | Description  | Notes
 * Api Key Authentication (Personal API Key):
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import opencarwings_client
+from opencarwings_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://opencarwings.viaaq.eu
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = opencarwings_client.Configuration(
     host = "https://opencarwings.viaaq.eu"
 )
 
@@ -461,9 +461,9 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CarsApi(api_client)
+    api_instance = opencarwings_client.CarsApi(api_client)
     vin = 'vin_example' # str | 
     id = 'id_example' # str | 
 
@@ -513,14 +513,14 @@ void (empty response body)
 * Api Key Authentication (Personal API Key):
 
 ```python
-import openapi_client
-from openapi_client.models.command_timer_setting import CommandTimerSetting
-from openapi_client.rest import ApiException
+import opencarwings_client
+from opencarwings_client.models.command_timer_setting import CommandTimerSetting
+from opencarwings_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://opencarwings.viaaq.eu
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = opencarwings_client.Configuration(
     host = "https://opencarwings.viaaq.eu"
 )
 
@@ -542,9 +542,9 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CarsApi(api_client)
+    api_instance = opencarwings_client.CarsApi(api_client)
     vin = 'vin_example' # str | 
 
     try:
@@ -594,14 +594,14 @@ Name | Type | Description  | Notes
 * Api Key Authentication (Personal API Key):
 
 ```python
-import openapi_client
-from openapi_client.models.command_timer_setting import CommandTimerSetting
-from openapi_client.rest import ApiException
+import opencarwings_client
+from opencarwings_client.models.command_timer_setting import CommandTimerSetting
+from opencarwings_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://opencarwings.viaaq.eu
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = opencarwings_client.Configuration(
     host = "https://opencarwings.viaaq.eu"
 )
 
@@ -623,12 +623,12 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CarsApi(api_client)
+    api_instance = opencarwings_client.CarsApi(api_client)
     vin = 'vin_example' # str | 
     id = 'id_example' # str | 
-    data = openapi_client.CommandTimerSetting() # CommandTimerSetting | 
+    data = opencarwings_client.CommandTimerSetting() # CommandTimerSetting | 
 
     try:
         api_response = api_instance.api_car_timers_partial_update(vin, id, data)
@@ -679,14 +679,14 @@ Name | Type | Description  | Notes
 * Api Key Authentication (Personal API Key):
 
 ```python
-import openapi_client
-from openapi_client.models.command_timer_setting import CommandTimerSetting
-from openapi_client.rest import ApiException
+import opencarwings_client
+from opencarwings_client.models.command_timer_setting import CommandTimerSetting
+from opencarwings_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://opencarwings.viaaq.eu
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = opencarwings_client.Configuration(
     host = "https://opencarwings.viaaq.eu"
 )
 
@@ -708,9 +708,9 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CarsApi(api_client)
+    api_instance = opencarwings_client.CarsApi(api_client)
     vin = 'vin_example' # str | 
     id = 'id_example' # str | 
 
@@ -762,14 +762,14 @@ Name | Type | Description  | Notes
 * Api Key Authentication (Personal API Key):
 
 ```python
-import openapi_client
-from openapi_client.models.command_timer_setting import CommandTimerSetting
-from openapi_client.rest import ApiException
+import opencarwings_client
+from opencarwings_client.models.command_timer_setting import CommandTimerSetting
+from opencarwings_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://opencarwings.viaaq.eu
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = opencarwings_client.Configuration(
     host = "https://opencarwings.viaaq.eu"
 )
 
@@ -791,12 +791,12 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CarsApi(api_client)
+    api_instance = opencarwings_client.CarsApi(api_client)
     vin = 'vin_example' # str | 
     id = 'id_example' # str | 
-    data = openapi_client.CommandTimerSetting() # CommandTimerSetting | 
+    data = opencarwings_client.CommandTimerSetting() # CommandTimerSetting | 
 
     try:
         api_response = api_instance.api_car_timers_update(vin, id, data)
@@ -847,15 +847,15 @@ Name | Type | Description  | Notes
 * Api Key Authentication (Personal API Key):
 
 ```python
-import openapi_client
-from openapi_client.models.car import Car
-from openapi_client.models.car_updating import CarUpdating
-from openapi_client.rest import ApiException
+import opencarwings_client
+from opencarwings_client.models.car import Car
+from opencarwings_client.models.car_updating import CarUpdating
+from opencarwings_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://opencarwings.viaaq.eu
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = opencarwings_client.Configuration(
     host = "https://opencarwings.viaaq.eu"
 )
 
@@ -877,11 +877,11 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CarsApi(api_client)
+    api_instance = opencarwings_client.CarsApi(api_client)
     vin = 'vin_example' # str | 
-    data = openapi_client.CarUpdating() # CarUpdating | 
+    data = opencarwings_client.CarUpdating() # CarUpdating | 
 
     try:
         api_response = api_instance.api_car_update(vin, data)
@@ -933,15 +933,15 @@ Send a command to your vehicle
 * Api Key Authentication (Personal API Key):
 
 ```python
-import openapi_client
-from openapi_client.models.api_command_create_request import ApiCommandCreateRequest
-from openapi_client.models.command_response import CommandResponse
-from openapi_client.rest import ApiException
+import opencarwings_client
+from opencarwings_client.models.api_command_create_request import ApiCommandCreateRequest
+from opencarwings_client.models.command_response import CommandResponse
+from opencarwings_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://opencarwings.viaaq.eu
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = opencarwings_client.Configuration(
     host = "https://opencarwings.viaaq.eu"
 )
 
@@ -963,11 +963,11 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CarsApi(api_client)
+    api_instance = opencarwings_client.CarsApi(api_client)
     vin = 'vin_example' # str | 
-    data = openapi_client.ApiCommandCreateRequest() # ApiCommandCreateRequest | 
+    data = opencarwings_client.ApiCommandCreateRequest() # ApiCommandCreateRequest | 
 
     try:
         api_response = api_instance.api_command_create(vin, data)

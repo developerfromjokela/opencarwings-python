@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.cars_api import CarsApi
+from opencarwings_client.api.cars_api import CarsApi
 
 
 class TestCarsApi(unittest.TestCase):

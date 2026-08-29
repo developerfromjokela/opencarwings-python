@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.pin_change import PinChange
+from opencarwings_client.models.pin_change import PinChange
 
 class TestPinChange(unittest.TestCase):
     """PinChange unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.tcu_configuration import TCUConfiguration
+from opencarwings_client.models.tcu_configuration import TCUConfiguration
 
 class TestTCUConfiguration(unittest.TestCase):
     """TCUConfiguration unit test stubs"""
@@ -46,7 +46,7 @@ class TestTCUConfiguration(unittest.TestCase):
                 server_url = '',
                 proxy_url = '',
                 connection_type = '',
-                ficosa_config = openapi_client.models.ficosa_config.Ficosa config()
+                ficosa_config = opencarwings_client.models.ficosa_config.Ficosa config()
             )
         else:
             return TCUConfiguration(

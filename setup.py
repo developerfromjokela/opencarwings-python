@@ -18,7 +18,7 @@ from setuptools import setup, find_packages  # noqa: H301
 #
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
-NAME = "openapi-client"
+NAME = "opencarwings-client"
 VERSION = "1.0.0"
 PYTHON_REQUIRES = ">= 3.10"
 REQUIRES = [
@@ -43,5 +43,5 @@ setup(
     long_description="""\
     API to get information about cars. API Token is accessible from your account settings
     """,  # noqa: E501
-    package_data={"openapi_client": ["py.typed"]},
+    package_data={"opencarwings_client": ["py.typed"]},
 )

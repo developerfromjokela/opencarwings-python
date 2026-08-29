@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.jwt_token_login import JWTTokenLogin
+from opencarwings_client.models.jwt_token_login import JWTTokenLogin
 
 # TODO update the JSON string below
 json = "{}"

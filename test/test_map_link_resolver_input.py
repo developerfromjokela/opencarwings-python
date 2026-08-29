@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.map_link_resolver_input import MapLinkResolverInput
+from opencarwings_client.models.map_link_resolver_input import MapLinkResolverInput
 
 class TestMapLinkResolverInput(unittest.TestCase):
     """MapLinkResolverInput unit test stubs"""

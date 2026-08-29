@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.alert_history_full import AlertHistoryFull
+from opencarwings_client.models.alert_history_full import AlertHistoryFull
 
 # TODO update the JSON string below
 json = "{}"

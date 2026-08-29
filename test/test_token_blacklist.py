@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.token_blacklist import TokenBlacklist
+from opencarwings_client.models.token_blacklist import TokenBlacklist
 
 class TestTokenBlacklist(unittest.TestCase):
     """TokenBlacklist unit test stubs"""

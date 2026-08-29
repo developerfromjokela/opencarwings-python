@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.jwt_token_obtain_pair import JWTTokenObtainPair
+from opencarwings_client.models.jwt_token_obtain_pair import JWTTokenObtainPair
 
 class TestJWTTokenObtainPair(unittest.TestCase):
     """JWTTokenObtainPair unit test stubs"""

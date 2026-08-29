@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.ev_info_updating import EVInfoUpdating
+from opencarwings_client.models.ev_info_updating import EVInfoUpdating
 
 class TestEVInfoUpdating(unittest.TestCase):
     """EVInfoUpdating unit test stubs"""

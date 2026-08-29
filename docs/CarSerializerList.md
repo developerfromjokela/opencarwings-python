@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.car_serializer_list import CarSerializerList
+from opencarwings_client.models.car_serializer_list import CarSerializerList
 
 # TODO update the JSON string below
 json = "{}"

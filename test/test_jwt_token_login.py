@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.jwt_token_login import JWTTokenLogin
+from opencarwings_client.models.jwt_token_login import JWTTokenLogin
 
 class TestJWTTokenLogin(unittest.TestCase):
     """JWTTokenLogin unit test stubs"""

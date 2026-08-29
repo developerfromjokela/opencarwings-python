@@ -21,8 +21,8 @@ from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from openapi_client.models.ev_info import EVInfo
-from openapi_client.models.location_info import LocationInfo
+from opencarwings_client.models.ev_info import EVInfo
+from opencarwings_client.models.location_info import LocationInfo
 from typing import Optional, Set
 from typing_extensions import Self
 from pydantic_core import to_jsonable_python

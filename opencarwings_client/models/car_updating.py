@@ -19,9 +19,9 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.ev_info_updating import EVInfoUpdating
-from openapi_client.models.route_plan import RoutePlan
-from openapi_client.models.send_to_car_location import SendToCarLocation
+from opencarwings_client.models.ev_info_updating import EVInfoUpdating
+from opencarwings_client.models.route_plan import RoutePlan
+from opencarwings_client.models.send_to_car_location import SendToCarLocation
 from typing import Optional, Set
 from typing_extensions import Self
 from pydantic_core import to_jsonable_python

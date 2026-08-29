@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.pin_change import PinChange
+from opencarwings_client.models.pin_change import PinChange
 
 # TODO update the JSON string below
 json = "{}"

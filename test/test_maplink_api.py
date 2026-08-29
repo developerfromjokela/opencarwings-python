@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.maplink_api import MaplinkApi
+from opencarwings_client.api.maplink_api import MaplinkApi
 
 
 class TestMaplinkApi(unittest.TestCase):

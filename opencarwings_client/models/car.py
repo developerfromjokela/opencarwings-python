@@ -21,13 +21,13 @@ from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from openapi_client.models.command_timer_setting import CommandTimerSetting
-from openapi_client.models.ev_info import EVInfo
-from openapi_client.models.location_info import LocationInfo
-from openapi_client.models.route_plan import RoutePlan
-from openapi_client.models.send_to_car_location import SendToCarLocation
-from openapi_client.models.tcu_configuration import TCUConfiguration
-from openapi_client.models.vehicle_health_info import VehicleHealthInfo
+from opencarwings_client.models.command_timer_setting import CommandTimerSetting
+from opencarwings_client.models.ev_info import EVInfo
+from opencarwings_client.models.location_info import LocationInfo
+from opencarwings_client.models.route_plan import RoutePlan
+from opencarwings_client.models.send_to_car_location import SendToCarLocation
+from opencarwings_client.models.tcu_configuration import TCUConfiguration
+from opencarwings_client.models.vehicle_health_info import VehicleHealthInfo
 from typing import Optional, Set
 from typing_extensions import Self
 from pydantic_core import to_jsonable_python

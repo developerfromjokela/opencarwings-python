@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.account_detail import AccountDetail
+from opencarwings_client.models.account_detail import AccountDetail
 
 class TestAccountDetail(unittest.TestCase):
     """AccountDetail unit test stubs"""

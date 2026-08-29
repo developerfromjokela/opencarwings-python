@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.send_to_car_location import SendToCarLocation
+from opencarwings_client.models.send_to_car_location import SendToCarLocation
 
 class TestSendToCarLocation(unittest.TestCase):
     """SendToCarLocation unit test stubs"""

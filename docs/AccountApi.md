@@ -1,4 +1,4 @@
-# openapi_client.AccountApi
+# opencarwings_client.AccountApi
 
 All URIs are relative to *https://opencarwings.viaaq.eu*
 
@@ -20,14 +20,14 @@ Get basic account details
 * Api Key Authentication (Personal API Key):
 
 ```python
-import openapi_client
-from openapi_client.models.account_detail import AccountDetail
-from openapi_client.rest import ApiException
+import opencarwings_client
+from opencarwings_client.models.account_detail import AccountDetail
+from opencarwings_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://opencarwings.viaaq.eu
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = opencarwings_client.Configuration(
     host = "https://opencarwings.viaaq.eu"
 )
 
@@ -49,9 +49,9 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AccountApi(api_client)
+    api_instance = opencarwings_client.AccountApi(api_client)
 
     try:
         api_response = api_instance.account_detail_list()
@@ -100,14 +100,14 @@ Change command PIN, requires OTP code if 2FA is enabled, or old pin if disabled
 * Api Key Authentication (Personal API Key):
 
 ```python
-import openapi_client
-from openapi_client.models.pin_change import PinChange
-from openapi_client.rest import ApiException
+import opencarwings_client
+from opencarwings_client.models.pin_change import PinChange
+from opencarwings_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://opencarwings.viaaq.eu
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = opencarwings_client.Configuration(
     host = "https://opencarwings.viaaq.eu"
 )
 
@@ -129,10 +129,10 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AccountApi(api_client)
-    data = openapi_client.PinChange() # PinChange | 
+    api_instance = opencarwings_client.AccountApi(api_client)
+    data = opencarwings_client.PinChange() # PinChange | 
 
     try:
         api_instance.account_pin_create(data)
@@ -184,13 +184,13 @@ Reset API-key. ONLY accessible from web portal!
 * Api Key Authentication (Personal API Key):
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import opencarwings_client
+from opencarwings_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://opencarwings.viaaq.eu
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = opencarwings_client.Configuration(
     host = "https://opencarwings.viaaq.eu"
 )
 
@@ -212,9 +212,9 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AccountApi(api_client)
+    api_instance = opencarwings_client.AccountApi(api_client)
 
     try:
         api_instance.account_reset_api_key_create()

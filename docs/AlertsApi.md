@@ -1,4 +1,4 @@
-# openapi_client.AlertsApi
+# opencarwings_client.AlertsApi
 
 All URIs are relative to *https://opencarwings.viaaq.eu*
 
@@ -18,14 +18,14 @@ Retrieve a list of alerts for a vehicle
 * Api Key Authentication (Personal API Key):
 
 ```python
-import openapi_client
-from openapi_client.models.alert_history_full import AlertHistoryFull
-from openapi_client.rest import ApiException
+import opencarwings_client
+from opencarwings_client.models.alert_history_full import AlertHistoryFull
+from opencarwings_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://opencarwings.viaaq.eu
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = opencarwings_client.Configuration(
     host = "https://opencarwings.viaaq.eu"
 )
 
@@ -47,9 +47,9 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AlertsApi(api_client)
+    api_instance = opencarwings_client.AlertsApi(api_client)
     vin = 'vin_example' # str | 
 
     try:

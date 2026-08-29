@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.vehicle_health_info import VehicleHealthInfo
+from opencarwings_client.models.vehicle_health_info import VehicleHealthInfo
 
 class TestVehicleHealthInfo(unittest.TestCase):
     """VehicleHealthInfo unit test stubs"""
@@ -38,8 +38,8 @@ class TestVehicleHealthInfo(unittest.TestCase):
                 id = 56,
                 last_updated = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 dtc_timestamp = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
-                dtc_short = openapi_client.models.dtc_short.Dtc short(),
-                dtc_long = openapi_client.models.dtc_long.Dtc long(),
+                dtc_short = opencarwings_client.models.dtc_short.Dtc short(),
+                dtc_long = opencarwings_client.models.dtc_long.Dtc long(),
                 tpms_light = True,
                 tpms_fr = -2147483648,
                 tpms_fl = -2147483648,

@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.car_updating import CarUpdating
+from opencarwings_client.models.car_updating import CarUpdating
 
 class TestCarUpdating(unittest.TestCase):
     """CarUpdating unit test stubs"""
@@ -35,24 +35,24 @@ class TestCarUpdating(unittest.TestCase):
         model = CarUpdating()
         if include_optional:
             return CarUpdating(
-                send_to_car_location = openapi_client.models.send_to_car_location.SendToCarLocation(
+                send_to_car_location = opencarwings_client.models.send_to_car_location.SendToCarLocation(
                     id = 56, 
                     lat = '', 
                     lon = '', 
                     name = '0', 
                     created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), ),
                 send_to_car_location_all = [
-                    openapi_client.models.send_to_car_location.SendToCarLocation(
+                    opencarwings_client.models.send_to_car_location.SendToCarLocation(
                         id = 56, 
                         lat = '', 
                         lon = '', 
                         name = '0', 
                         created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), )
                     ],
-                ev_info = openapi_client.models.ev_info_updating.EVInfoUpdating(
+                ev_info = opencarwings_client.models.ev_info_updating.EVInfoUpdating(
                     force_soc_display = True, ),
                 route_plans = [
-                    openapi_client.models.route_plan.RoutePlan(
+                    opencarwings_client.models.route_plan.RoutePlan(
                         id = 56, 
                         name = '0', 
                         created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
@@ -78,8 +78,8 @@ class TestCarUpdating(unittest.TestCase):
                         point5_lat = '', 
                         point5_lon = '', )
                     ],
-                favorite_channels = openapi_client.models.favorite_channels.Favorite channels(),
-                custom_channels = openapi_client.models.custom_channels.Custom channels()
+                favorite_channels = opencarwings_client.models.favorite_channels.Favorite channels(),
+                custom_channels = opencarwings_client.models.custom_channels.Custom channels()
             )
         else:
             return CarUpdating(

@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.map_link_resolved_location import MapLinkResolvedLocation
+from opencarwings_client.models.map_link_resolved_location import MapLinkResolvedLocation
 
 class TestMapLinkResolvedLocation(unittest.TestCase):
     """MapLinkResolvedLocation unit test stubs"""

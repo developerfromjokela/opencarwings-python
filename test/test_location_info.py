@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.location_info import LocationInfo
+from opencarwings_client.models.location_info import LocationInfo
 
 class TestLocationInfo(unittest.TestCase):
     """LocationInfo unit test stubs"""

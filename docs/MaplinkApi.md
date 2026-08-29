@@ -1,4 +1,4 @@
-# openapi_client.MaplinkApi
+# opencarwings_client.MaplinkApi
 
 All URIs are relative to *https://opencarwings.viaaq.eu*
 
@@ -18,15 +18,15 @@ Resolve maps link from Google or Apple into location
 * Api Key Authentication (Personal API Key):
 
 ```python
-import openapi_client
-from openapi_client.models.map_link_resolver_input import MapLinkResolverInput
-from openapi_client.models.map_link_resolver_response import MapLinkResolverResponse
-from openapi_client.rest import ApiException
+import opencarwings_client
+from opencarwings_client.models.map_link_resolver_input import MapLinkResolverInput
+from opencarwings_client.models.map_link_resolver_response import MapLinkResolverResponse
+from opencarwings_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://opencarwings.viaaq.eu
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = opencarwings_client.Configuration(
     host = "https://opencarwings.viaaq.eu"
 )
 
@@ -48,10 +48,10 @@ configuration.api_key['Personal API Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Personal API Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with opencarwings_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MaplinkApi(api_client)
-    data = openapi_client.MapLinkResolverInput() # MapLinkResolverInput | 
+    api_instance = opencarwings_client.MaplinkApi(api_client)
+    data = opencarwings_client.MapLinkResolverInput() # MapLinkResolverInput | 
 
     try:
         api_response = api_instance.api_maplink_resolve_create(data)

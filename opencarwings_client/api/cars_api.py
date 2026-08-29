@@ -17,16 +17,16 @@ from typing_extensions import Annotated
 
 from pydantic import StrictStr
 from typing import List
-from openapi_client.models.api_command_create_request import ApiCommandCreateRequest
-from openapi_client.models.car import Car
-from openapi_client.models.car_serializer_list import CarSerializerList
-from openapi_client.models.car_updating import CarUpdating
-from openapi_client.models.command_response import CommandResponse
-from openapi_client.models.command_timer_setting import CommandTimerSetting
+from opencarwings_client.models.api_command_create_request import ApiCommandCreateRequest
+from opencarwings_client.models.car import Car
+from opencarwings_client.models.car_serializer_list import CarSerializerList
+from opencarwings_client.models.car_updating import CarUpdating
+from opencarwings_client.models.command_response import CommandResponse
+from opencarwings_client.models.command_timer_setting import CommandTimerSetting
 
-from openapi_client.api_client import ApiClient, RequestSerialized
-from openapi_client.api_response import ApiResponse
-from openapi_client.rest import RESTResponseType
+from opencarwings_client.api_client import ApiClient, RequestSerialized
+from opencarwings_client.api_response import ApiResponse
+from opencarwings_client.rest import RESTResponseType
 
 
 class CarsApi:

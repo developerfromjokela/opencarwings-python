@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.car_serializer_list import CarSerializerList
+from opencarwings_client.models.car_serializer_list import CarSerializerList
 
 class TestCarSerializerList(unittest.TestCase):
     """CarSerializerList unit test stubs"""
@@ -38,7 +38,7 @@ class TestCarSerializerList(unittest.TestCase):
                 vin = '0',
                 last_connection = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 nickname = '0',
-                ev_info = openapi_client.models.ev_info.EVInfo(
+                ev_info = opencarwings_client.models.ev_info.EVInfo(
                     id = 56, 
                     last_updated = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     range_acon = -2147483648, 
@@ -69,7 +69,7 @@ class TestCarSerializerList(unittest.TestCase):
                     obc_6kw_avail = True, 
                     batt_heater_avail = True, 
                     batt_heater_status = True, ),
-                location = openapi_client.models.location_info.LocationInfo(
+                location = opencarwings_client.models.location_info.LocationInfo(
                     id = 56, 
                     last_updated = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     lat = '', 
@@ -82,7 +82,7 @@ class TestCarSerializerList(unittest.TestCase):
         else:
             return CarSerializerList(
                 vin = '0',
-                ev_info = openapi_client.models.ev_info.EVInfo(
+                ev_info = opencarwings_client.models.ev_info.EVInfo(
                     id = 56, 
                     last_updated = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     range_acon = -2147483648, 
@@ -113,7 +113,7 @@ class TestCarSerializerList(unittest.TestCase):
                     obc_6kw_avail = True, 
                     batt_heater_avail = True, 
                     batt_heater_status = True, ),
-                location = openapi_client.models.location_info.LocationInfo(
+                location = opencarwings_client.models.location_info.LocationInfo(
                     id = 56, 
                     last_updated = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     lat = '', 

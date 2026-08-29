@@ -17,27 +17,22 @@ import pprint
 import re  # noqa: F401
 import json
 
-from datetime import datetime
-from pydantic import BaseModel, ConfigDict, Field, StrictInt
+from pydantic import BaseModel, ConfigDict, Field, StrictBool
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from openapi_client.models.car import Car
+from opencarwings_client.models.map_link_resolved_location import MapLinkResolvedLocation
 from typing import Optional, Set
 from typing_extensions import Self
 from pydantic_core import to_jsonable_python
 
-class AlertHistoryFull(BaseModel):
+class MapLinkResolverResponse(BaseModel):
     """
-    AlertHistoryFull
+    MapLinkResolverResponse
     """ # noqa: E501
-    id: Optional[StrictInt] = None
-    type: StrictInt
-    type_display: Annotated[str, Field(min_length=1, strict=True)]
-    timestamp: Optional[datetime] = None
-    command_id: Optional[Annotated[int, Field(le=2147483647, strict=True, ge=-2147483648)]] = None
-    additional_data: Optional[Annotated[str, Field(min_length=1, strict=True)]] = None
-    car: Optional[Car] = None
-    __properties: ClassVar[List[str]] = ["id", "type", "type_display", "timestamp", "command_id", "additional_data", "car"]
+    status: StrictBool
+    cause: Optional[Annotated[str, Field(min_length=1, strict=True)]] = None
+    location: Optional[MapLinkResolvedLocation] = None
+    __properties: ClassVar[List[str]] = ["status", "cause", "location"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -57,7 +52,7 @@ class AlertHistoryFull(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of AlertHistoryFull from a JSON string"""
+        """Create an instance of MapLinkResolverResponse from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -69,12 +64,8 @@ class AlertHistoryFull(BaseModel):
         * `None` is only added to the output dict for nullable fields that
           were set at model initialization. Other fields with value `None`
           are ignored.
-        * OpenAPI `readOnly` fields are excluded.
-        * OpenAPI `readOnly` fields are excluded.
         """
         excluded_fields: Set[str] = set([
-            "id",
-            "timestamp",
         ])
 
         _dict = self.model_dump(
@@ -82,24 +73,19 @@ class AlertHistoryFull(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of car
-        if self.car:
-            _dict['car'] = self.car.to_dict()
-        # set to None if command_id (nullable) is None
+        # override the default output from pydantic by calling `to_dict()` of location
+        if self.location:
+            _dict['location'] = self.location.to_dict()
+        # set to None if location (nullable) is None
         # and model_fields_set contains the field
-        if self.command_id is None and "command_id" in self.model_fields_set:
-            _dict['command_id'] = None
-
-        # set to None if additional_data (nullable) is None
-        # and model_fields_set contains the field
-        if self.additional_data is None and "additional_data" in self.model_fields_set:
-            _dict['additional_data'] = None
+        if self.location is None and "location" in self.model_fields_set:
+            _dict['location'] = None
 
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of AlertHistoryFull from a dict"""
+        """Create an instance of MapLinkResolverResponse from a dict"""
         if obj is None:
             return None
 
@@ -107,13 +93,9 @@ class AlertHistoryFull(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "id": obj.get("id"),
-            "type": obj.get("type"),
-            "type_display": obj.get("type_display"),
-            "timestamp": obj.get("timestamp"),
-            "command_id": obj.get("command_id"),
-            "additional_data": obj.get("additional_data"),
-            "car": Car.from_dict(obj["car"]) if obj.get("car") is not None else None
+            "status": obj.get("status"),
+            "cause": obj.get("cause"),
+            "location": MapLinkResolvedLocation.from_dict(obj["location"]) if obj.get("location") is not None else None
         })
         return _obj
 

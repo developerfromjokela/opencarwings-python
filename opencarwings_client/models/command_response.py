@@ -17,22 +17,21 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool
-from typing import Any, ClassVar, Dict, List, Optional
+from pydantic import BaseModel, ConfigDict, Field
+from typing import Any, ClassVar, Dict, List
 from typing_extensions import Annotated
-from openapi_client.models.map_link_resolved_location import MapLinkResolvedLocation
+from opencarwings_client.models.car import Car
 from typing import Optional, Set
 from typing_extensions import Self
 from pydantic_core import to_jsonable_python
 
-class MapLinkResolverResponse(BaseModel):
+class CommandResponse(BaseModel):
     """
-    MapLinkResolverResponse
+    CommandResponse
     """ # noqa: E501
-    status: StrictBool
-    cause: Optional[Annotated[str, Field(min_length=1, strict=True)]] = None
-    location: Optional[MapLinkResolvedLocation] = None
-    __properties: ClassVar[List[str]] = ["status", "cause", "location"]
+    message: Annotated[str, Field(min_length=1, strict=True)]
+    car: Car
+    __properties: ClassVar[List[str]] = ["message", "car"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -52,7 +51,7 @@ class MapLinkResolverResponse(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of MapLinkResolverResponse from a JSON string"""
+        """Create an instance of CommandResponse from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -73,19 +72,14 @@ class MapLinkResolverResponse(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of location
-        if self.location:
-            _dict['location'] = self.location.to_dict()
-        # set to None if location (nullable) is None
-        # and model_fields_set contains the field
-        if self.location is None and "location" in self.model_fields_set:
-            _dict['location'] = None
-
+        # override the default output from pydantic by calling `to_dict()` of car
+        if self.car:
+            _dict['car'] = self.car.to_dict()
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of MapLinkResolverResponse from a dict"""
+        """Create an instance of CommandResponse from a dict"""
         if obj is None:
             return None
 
@@ -93,9 +87,8 @@ class MapLinkResolverResponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "status": obj.get("status"),
-            "cause": obj.get("cause"),
-            "location": MapLinkResolvedLocation.from_dict(obj["location"]) if obj.get("location") is not None else None
+            "message": obj.get("message"),
+            "car": Car.from_dict(obj["car"]) if obj.get("car") is not None else None
         })
         return _obj
 

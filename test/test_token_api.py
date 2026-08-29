@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.token_api import TokenApi
+from opencarwings_client.api.token_api import TokenApi
 
 
 class TestTokenApi(unittest.TestCase):
