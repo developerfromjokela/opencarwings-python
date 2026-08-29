@@ -24,7 +24,7 @@ jobs:
       uses: openapi-generators/openapitools-generator-action@v1
       with:
         generator: python
-        command-args: "--package-name=opencarwings_client"
+        command-args: "--package-name=opencarwings_client --library asyncio"
 
     - name: Copy new client
       run: |
