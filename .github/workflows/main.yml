@@ -22,13 +22,12 @@ jobs:
       uses: openapi-generators/openapitools-generator-action@v1
       with:
         generator: python
-        out: new_client
 
     - name: Copy new client
       run: |
-        cp -r new_client/* .
-        cp -r new_client/.* .
-        rm -rf new_client
+        cp -r python-client/* .
+        cp -r python-client/.* .
+        rm -rf python-client
     
 
     - name: Commit new client
