@@ -570,7 +570,7 @@ conf = opencarwings_client.Configuration(
                 'in': 'header',
                 'key': 'Authorization',
                 'value': self.get_api_key_with_prefix(
-                    'Personal API Key',
+                    'Token',
                 ),
             }
         if 'Bearer' in self.api_key:
